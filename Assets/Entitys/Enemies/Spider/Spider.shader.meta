@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 40d9a5ec08c13434bae84f7a1cc99f4b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _spider_UV: {fileID: 2800000, guid: ec5ab78cd6205124c9af9038cd234236, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
