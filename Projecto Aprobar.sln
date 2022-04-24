@@ -1,24 +1,19 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{9D4176FD-0AD0-1A37-D814-3F05568E0EBD}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{fd76419d-d00a-371a-d814-3f05568e0ebd}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmplifyShaderEditor", "AmplifyShaderEditor.csproj", "{C35E2DB6-49B9-8592-B842-6AB28388EE9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmplifyShaderEditor", "AmplifyShaderEditor.csproj", "{b62d5ec3-b949-9285-b842-6ab28388ee9f}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9D4176FD-0AD0-1A37-D814-3F05568E0EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D4176FD-0AD0-1A37-D814-3F05568E0EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D4176FD-0AD0-1A37-D814-3F05568E0EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D4176FD-0AD0-1A37-D814-3F05568E0EBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C35E2DB6-49B9-8592-B842-6AB28388EE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C35E2DB6-49B9-8592-B842-6AB28388EE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C35E2DB6-49B9-8592-B842-6AB28388EE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C35E2DB6-49B9-8592-B842-6AB28388EE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{fd76419d-d00a-371a-d814-3f05568e0ebd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{fd76419d-d00a-371a-d814-3f05568e0ebd}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b62d5ec3-b949-9285-b842-6ab28388ee9f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b62d5ec3-b949-9285-b842-6ab28388ee9f}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
