@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : MonoBehaviour {
-    public int _value = 1;
+    public int value = 1;
     /*void Update(){
-        if (_value < 5){
+        if (value < 5){
         }
     }*/
 
@@ -23,21 +23,21 @@ public class Coin : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log("Llego " + this.name + " value: "+ _value);
-        CoinManager.Instance.addCoins(this._value);
+        Debug.Log("Llego " + this.name + " value: "+ value);
+        CoinManager.Instance.addCoins(this.value);
         CoinFactory.Instance.ReturnCoin(this);
     }
 
     void setCoinValue(){
         int random = Random.Range(1, 11);
         if(random <= 5){
-            _value = 1;
+            value = 1;
         }
         else if(random <= 8){
-            _value = 2;
+            value = 2;
         }
         else{
-            _value = 5;
+            value = 5;
         }
     }
 }

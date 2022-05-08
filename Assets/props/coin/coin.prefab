@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6222171255041534419}
   - component: {fileID: 5881373991378459976}
   - component: {fileID: 3645853303508366239}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5573604460636801030}
-  m_Mesh: {fileID: -5216581434543980006, guid: a370d81b32343b4479c3c93df42d552c, type: 3}
+  m_Mesh: {fileID: -5216581434543980006, guid: dc24664931094ce48b0d51eaebf51b3f, type: 3}
 --- !u!23 &6222171255041534419
 MeshRenderer:
   m_ObjectHideFlags: 0

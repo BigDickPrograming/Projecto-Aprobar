@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour {
-    public float Life;
-    public int Attack;
-
-    SerializeField _life;
-    /*protected virtual void Death(){
+    [SerializeField]
+    float _life;
+  /*  protected virtual void Death(){
         instantiateCoin();
-    }*/
-
+    }
+    */
     public virtual void Death(){ //public solo para debuggear
         instantiateCoin();
     }
-    protected virtual void Damage(float dmg){
-        Life -= dmg;
-        if (Life <= 0)
+    public virtual void Damage(float dmg){
+        _life -= dmg;
+        if (_life <= 0)
             Death();
     }
 

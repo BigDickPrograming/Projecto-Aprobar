@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerAttack
+  - EnemyAttack
+  - Player
+  - Enemy
+  - Platform
+  - Drop
+  - CoinCollector
   - 
   - 
   - 

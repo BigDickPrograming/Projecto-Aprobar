@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmoveEscape : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class EmoveEscape : IEMovement{ 
+    protected float _speed;
+    protected Transform _transform;
+    protected Transform _target;
+    public EmoveEscape(Transform transform, Transform target, float speed = 1.5f){
+        _transform = transform;
+        //_target = Player.PlayerTransform;
+        _target = target;
+        _speed = speed;
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+    
+    public void Emovement(){
+      _transform.position -= (_target.position - _transform.position).normalized * _speed * Time.deltaTime;
         
+        //_transform.position -= (Vector3.zero)*_speed * Time.deltaTime;
+        //Debug.Log(_target.position + _transform.position);
+       /* 
+         Vector3 dir = _transform.position - _target.position;
+        _transform.Translate(dir * _speed * Time.deltaTime);
+        */
     }
 }
