@@ -38,7 +38,6 @@ public class JoyController : Controller, IDragHandler, IEndDragHandler {
     public void OnEndDrag(PointerEventData eventData){
         transform.position = initPosition;
         dir = Vector3.zero;
-        Debug.Log("pointer up");
     }
 
     Vector3 ordenarVector3(Vector3 vec){

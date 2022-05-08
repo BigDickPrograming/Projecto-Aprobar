@@ -23,7 +23,6 @@ public class Coin : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log("Llego " + this.name + " value: "+ value);
         CoinManager.Instance.addCoins(this.value);
         CoinFactory.Instance.ReturnCoin(this);
     }

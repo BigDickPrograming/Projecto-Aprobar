@@ -5,7 +5,7 @@ using UnityEngine;
 public class Entity : MonoBehaviour {
     [SerializeField]
     float _life;
-  /*  protected virtual void Death(){
+    /*  protected virtual void Death(){
         instantiateCoin();
     }
     */

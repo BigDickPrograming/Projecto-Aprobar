@@ -17,8 +17,8 @@ TagManager:
   - Enemy
   - Platform
   - Drop
-  - CoinCollector
-  - 
+  - DropCollector
+  - PlayerSensor
   - 
   - 
   - 

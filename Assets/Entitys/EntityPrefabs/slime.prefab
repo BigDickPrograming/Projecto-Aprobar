@@ -70,7 +70,8 @@ GameObject:
   - component: {fileID: 2987337376476544508}
   - component: {fileID: 1049849770382805302}
   - component: {fileID: 7467845788971472181}
-  m_Layer: 0
+  - component: {fileID: 8351051002251570997}
+  m_Layer: 13
   m_Name: slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,6 +158,19 @@ MonoBehaviour:
   _life: 0
   _speed: 5
   _target: {fileID: 6710628722789463112, guid: 4329dfed0be3a4245b942884109696ab, type: 3}
+--- !u!65 &8351051002251570997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554072540733696227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.70010614, z: 8}
+  m_Center: {x: 0.0016582012, y: 0.344895, z: 0.00063982606}
 --- !u!1 &7689234557236520599
 GameObject:
   m_ObjectHideFlags: 0

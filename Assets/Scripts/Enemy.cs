@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity{
+public class Enemy : Entity {
     [SerializeField]
-     protected float _speed = 5;
+    protected float _speed = 5;
     [SerializeField]
     protected Transform _target;
     public IEMovement MyCurrentBehavior;
     protected IEMovement _Escape;
     protected IEMovement _Chase;
-     void Awake(){
+    IEMovement _previousBehavior;
+    void Awake(){
         _Escape = new EmoveEscape(transform, _target, _speed);
         _Chase = new EmoveTarget(transform, _target, _speed);
-        MyCurrentBehavior = _Chase;
-        
+        MyCurrentBehavior = null;
+        _previousBehavior = _Chase;
     }
     void Update(){
         MyCurrentBehavior?.Emovement();
@@ -23,9 +24,14 @@ public class Enemy : Entity{
         //Debug.Log("mi behavior es " + MyCurrentBehavior);
     }
     public override void Death(){
-     //Debug.Log(MyCurrentBehavior);
-     base.Death();    
+        base.Death();    
     }
-
+    private void OnTriggerEnter(Collider other){
+        MyCurrentBehavior = _previousBehavior;
+    }
+    private void OnTriggerExit(Collider other) {
+        _previousBehavior = MyCurrentBehavior;
+        MyCurrentBehavior = null;
+    }    
 }
 

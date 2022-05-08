@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,8 +35,6 @@ public class Slime : Enemy, IPrototype {
             .setEscape(transform, _target, _speed)
             .setCurrentBehavior(_Escape);        
         res._numSlime = _numSlime;
-        //Debug.Log(res.MyCurrentBehavior);
-       // Debug.Log((res._target.position + res.transform.position).normalized * res._speed * Time.deltaTime);
         return res;
     }
     public override void Death(){
@@ -49,13 +47,6 @@ public class Slime : Enemy, IPrototype {
             Clone();
             Clone();
             Clone();
-            /*
-            //Debug.Log((_target.position + transform.position).normalized * _speed * Time.deltaTime);
-            Debug.Log(_target.position);
-            Debug.Log(transform.position);
-            Debug.Log((_target.position + transform.position).normalized);
-            Debug.Log(_speed);
-            Debug.Log(Time.deltaTime);*/
         }
         SlimeFactory.Instance.ReturnSlime(this);
     }
@@ -75,7 +66,4 @@ public class Slime : Enemy, IPrototype {
         s.gameObject.SetActive(false);
     }
     #endregion
-
-    
-    
 }
