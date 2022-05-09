@@ -37,12 +37,18 @@ public class MySceneManager : MonoBehaviour {
     }
     private void OnEnable(){
         EventManager.Subscribe(EVENT.LOSEGAME, OnLose);
+        EventManager.Subscribe(EVENT.WINGAME, OnWin);
     }
     private void OnDisable(){
         EventManager.Unsubscribe(EVENT.LOSEGAME, OnLose);
+        EventManager.Unsubscribe(EVENT.WINGAME, OnWin);
     }
 
     void OnLose(params object[] p){
         loadScene("LoseScene");
+    }
+
+    void OnWin(params object[] p){
+        loadScene("WinScene");
     }
 }

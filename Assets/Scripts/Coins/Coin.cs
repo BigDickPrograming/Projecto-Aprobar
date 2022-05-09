@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 public class Coin : MonoBehaviour {
     public int value = 1;
-    public AudioClip clip;
-    [SerializeField]
-     AudioSource audio;
-    
-     /*void Update(){
-        if (value < 5){
-        }
-    }*/
+    [SerializeField] AudioClip audioClip;
 
     private void Reset(){
         setCoinValue();
@@ -45,11 +37,8 @@ public class Coin : MonoBehaviour {
             value = 5;
         }
     }
-     public void CoinSound(){    
-        GameObject gameobject = new GameObject("audio");
-        var audiogameobject = gameobject.AddComponent<AudioSource>();
-        audiogameobject = audio;
-        gameobject.AddComponent<Destroyer>();
-        Instantiate(gameobject, transform.position,Quaternion.identity);
+    public void CoinSound(){
+        Player.PlayerAudioSource.clip = audioClip;
+        Player.PlayerAudioSource.Play();
     }
 }

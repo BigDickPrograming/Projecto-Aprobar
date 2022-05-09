@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 269088107}
   - component: {fileID: 269088106}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,7 +230,7 @@ RectTransform:
   m_Children:
   - {fileID: 1997933006}
   m_Father: {fileID: 377633611}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -424,9 +424,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 25321076}
-  - {fileID: 1564920963}
-  - {fileID: 1414417614}
   - {fileID: 269088105}
+  - {fileID: 1414417614}
+  - {fileID: 1564920963}
   - {fileID: 1910847135}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 377633607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ef6e7f18a9f1045be919af9b69898e, type: 3}
+  m_Script: {fileID: 11500000, guid: c3d9761bf42b10e4e92e1e379d25a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainButtons: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 1414417616}
   - component: {fileID: 1414417615}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,8 +688,8 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 269088107}
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 1414417616}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 1564920965}
   - component: {fileID: 1564920964}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,7 +909,7 @@ RectTransform:
   m_Children:
   - {fileID: 1782143050}
   m_Father: {fileID: 377633611}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -955,8 +955,8 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 269088107}
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 1564920965}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:

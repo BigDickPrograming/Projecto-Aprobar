@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : Entity {
-   public static Transform PlayerTransform {
+   public static AudioSource PlayerAudioSource {
    get {
-      Debug.Log("devuelvo player");
-         return _playerTransform;
+         return _playerAudioSource;
       }
    }
-   static Transform _playerTransform;
+   static AudioSource _playerAudioSource;
    void Awake(){
-      _playerTransform = transform;
+      _playerAudioSource = GetComponent<AudioSource>();
    }
    private void OnEnable(){ 
       EventManager.Subscribe(EVENT.GAIN_HP, Heal);
