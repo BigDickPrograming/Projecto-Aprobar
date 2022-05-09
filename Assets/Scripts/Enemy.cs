@@ -11,6 +11,7 @@ public class Enemy : Entity {
     protected IEMovement _Escape;
     protected IEMovement _Chase;
     IEMovement _previousBehavior;
+    public ParticleSystem Particle;
     void Awake(){
         _Escape = new EmoveEscape(transform, _target, _speed);
         _Chase = new EmoveTarget(transform, _target, _speed);
@@ -24,6 +25,7 @@ public class Enemy : Entity {
         //Debug.Log("mi behavior es " + MyCurrentBehavior);
     }
     public override void Death(){
+        ParticleDeath();
         base.Death();    
     }
     private void OnTriggerEnter(Collider other){
@@ -33,5 +35,10 @@ public class Enemy : Entity {
         _previousBehavior = MyCurrentBehavior;
         MyCurrentBehavior = null;
     }    
+    public void ParticleDeath(){    
+        Instantiate(Particle, transform.position,Quaternion.identity);
+
+    }
 }
+
 

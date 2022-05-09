@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour {
     [SerializeField]
-    float _life;
+    protected float _life;
+    float maxHp;
     /*  protected virtual void Death(){
         instantiateCoin();
     }
@@ -26,6 +27,17 @@ public class Entity : MonoBehaviour {
             c.transform.forward = Vector3.forward;
         }
     }
-
+    public virtual void Heal(params object[] p){
+        float ammount = (float) p[0];
+        if (_life + ammount > maxHp){
+            _life = maxHp;
+            return;
+        }
+        _life += ammount;
+    }
     protected virtual void Reset(){}
+
+    private void Start(){
+        maxHp = _life;
+    }
 }

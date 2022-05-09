@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Slime : Enemy, IPrototype {
-    int _numSlime = 0;
+    int _numSlime = 0;  
     #region Builder
     public Slime SetPosition(float x = 0, float y = 0, float z = 0){
         transform.position = new Vector3(x, y, z);
@@ -27,7 +27,7 @@ public class Slime : Enemy, IPrototype {
     }
     public IPrototype Clone(){
         var res = SlimeFactory.Instance.pool.GetObject();
-        float espacio = 0.5f/_numSlime;
+        float espacio = 0.5f/_numSlime + 2f;
         res.SetPosition(transform.localPosition.x + Random.Range(-espacio, espacio)
                 , transform.localPosition.y, transform.localPosition.z + Random.Range(-espacio, espacio))
             .SetScale(transform.localScale.x - 0.25f, transform.localScale.y - 0.25f, transform.localScale.z - 0.25f)
@@ -38,6 +38,7 @@ public class Slime : Enemy, IPrototype {
         return res;
     }
     public override void Death(){
+        ParticleDeath();
         MyCurrentBehavior = _Escape;
         base.Death();
         _numSlime++;
