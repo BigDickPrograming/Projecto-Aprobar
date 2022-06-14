@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _life: 0
   _speed: 3
-  _target: {fileID: 6710628722789463112, guid: 4329dfed0be3a4245b942884109696ab, type: 3}
+  _target: {fileID: 0}
   Particle: {fileID: 1649622035940069855, guid: 8f1795734b63c944f88c16f0d51447bd, type: 3}
 --- !u!65 &8351051002251570997
 BoxCollider:

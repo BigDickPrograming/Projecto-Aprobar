@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour {
     [SerializeField] protected float baseDMG = 0;
     Entity entity;
-    protected void EntityAttack(){
+    protected virtual void EntityAttack(){
         entity.Damage(baseDMG);
     }
 

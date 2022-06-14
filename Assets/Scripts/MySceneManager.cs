@@ -8,6 +8,7 @@ public class MySceneManager : MonoBehaviour {
     public GameObject mainButtons;
     public GameObject mainInstructions;
     public GameObject backButton;
+    public GameObject controlMenu;
     private void Start(){
         menuController = this;
     }
@@ -50,5 +51,9 @@ public class MySceneManager : MonoBehaviour {
 
     void OnWin(params object[] p){
         loadScene("WinScene");
+    }
+
+    public void ControlMenu(){
+        controlMenu.SetActive(true);
     }
 }

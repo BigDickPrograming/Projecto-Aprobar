@@ -13,19 +13,20 @@ public class Enemy : Entity {
     IEMovement _previousBehavior;
     public ParticleSystem Particle;
     void Awake(){
-        _Escape = new EmoveEscape(transform, _target, _speed);
-        _Chase = new EmoveTarget(transform, _target, _speed);
+        _Escape = new EmoveEscape(transform, playerManager.PlayerTransform, _speed);
+        _Chase = new EmoveTarget(transform, playerManager.PlayerTransform, _speed);
         MyCurrentBehavior = null;
         _previousBehavior = _Chase;
     }
     void Update(){
         MyCurrentBehavior?.Emovement();
-        //Debug.Log("mi transform es " + transform);
-        //Debug.Log("mi velosida es " + _speed);
-        //Debug.Log("mi behavior es " + MyCurrentBehavior);
+        Debug.Log("mi transform es " + transform);
+        Debug.Log("mi velosida es " + _speed);
+        Debug.Log("mi behavior es " + MyCurrentBehavior);
     }
     public override void Death(){
         ParticleDeath();
+        MyCurrentBehavior = _Escape;
         base.Death();    
     }
     private void OnTriggerEnter(Collider other){

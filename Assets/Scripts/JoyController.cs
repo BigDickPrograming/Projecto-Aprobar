@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class JoyController : Controller, IDragHandler, IEndDragHandler {
     [SerializeField] float maxMagnitude = 100;
-    [SerializeField] CanvasGroup parent = null;
     Vector3 initPosition;
     Vector3 dir;
 
@@ -20,12 +19,7 @@ public class JoyController : Controller, IDragHandler, IEndDragHandler {
     private void Update(){
         if (Input.touchCount > 0){
             if(Input.touches[0].phase == TouchPhase.Began){
-                parent.alpha = 1;
-                parent.transform.position = Input.touches[0].position;
                 initPosition = transform.position;
-            }
-            else if (Input.touches[0].phase == TouchPhase.Ended){
-                parent.alpha = 0;
             }
         }
     }

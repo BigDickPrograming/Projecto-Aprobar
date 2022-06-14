@@ -9,6 +9,15 @@ public class Player : Entity {
       }
    }
    static AudioSource _playerAudioSource;
+   public static Transform PlayerTransform {
+   get {
+         return _playerTransform;
+      }
+   }
+   static Transform _playerTransform;
+   private void Update() {
+      _playerTransform = transform;
+   }
    void Awake(){
       _playerAudioSource = GetComponent<AudioSource>();
    }

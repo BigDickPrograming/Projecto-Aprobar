@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimatorManager : MonoBehaviour {
+   
+   public AudioSource playeraudio;
     public static AnimatorManager Instance {
         get {
             return _instance;
@@ -20,6 +22,7 @@ public class AnimatorManager : MonoBehaviour {
     }
     public void Attack(){
         anim.SetTrigger(attackHash);
+        
     }
 
     public void setIsWalking(bool isWalking){
