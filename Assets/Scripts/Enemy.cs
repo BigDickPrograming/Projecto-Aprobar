@@ -20,9 +20,9 @@ public class Enemy : Entity {
     }
     void Update(){
         MyCurrentBehavior?.Emovement();
-        Debug.Log("mi transform es " + transform);
-        Debug.Log("mi velosida es " + _speed);
-        Debug.Log("mi behavior es " + MyCurrentBehavior);
+        //Debug.Log("mi transform es " + transform);
+        //Debug.Log("mi velosida es " + _speed);
+        //Debug.Log("mi behavior es " + MyCurrentBehavior);
     }
     public override void Death(){
         ParticleDeath();
