@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealPot : Entity {
+      [SerializeField] HealingDecorator decorator;
     public override void Death(){
-        EventManager.TriggerEvent(EVENT.GAIN_HP, 25f);
-        Destroy(gameObject);
+         Destroy(gameObject);
+         decorator.StackEfect();
+         
     }
 }

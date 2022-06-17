@@ -8,6 +8,7 @@ public class Player : Entity {
          return _playerAudioSource;
       }
    }
+   
    static AudioSource _playerAudioSource;
    public static Transform PlayerTransform {
    get {
@@ -37,4 +38,6 @@ public class Player : Entity {
    private void OnDisable(){
       EventManager.Unsubscribe(EVENT.GAIN_HP, Heal);
    }
+
+   
 }

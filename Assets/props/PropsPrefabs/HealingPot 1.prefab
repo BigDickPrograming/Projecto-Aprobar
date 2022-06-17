@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1655555317567083759}
   - component: {fileID: 8815504524566288350}
   - component: {fileID: 8998920610672629405}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: HealingPot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 5
+  decorator: {fileID: 0}
 --- !u!1 &4678266503439003423
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693880353204102729, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
@@ -250,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoisonedParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 9078827794788425170, guid: 426aa4109e026434091d194d1f565529, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 426aa4109e026434091d194d1f565529, type: 3}
 --- !u!4 &1308843140403026478 stripped
@@ -270,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5956874305067258904, guid: 3b6e47bdcf48f02459b4adff4edbd0dd, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6476388684779212450, guid: 3b6e47bdcf48f02459b4adff4edbd0dd, type: 3}
       propertyPath: m_RootOrder
@@ -380,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693880353204102729, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
@@ -446,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693880353204102729, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
@@ -512,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693880353204102729, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3e58395b6328e40b754808cf54a57d, type: 3}

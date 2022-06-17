@@ -12,8 +12,9 @@ public class Attack : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         entity = other.GetComponentInParent<Entity>();
         if(entity != null){
-            //Debug.Log("Name: " + entity.name);
+            Debug.Log("Name: " + entity.name);
             EntityAttack();
+            entity = null;
         }
     }
 

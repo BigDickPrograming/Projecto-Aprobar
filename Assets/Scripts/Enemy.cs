@@ -10,31 +10,26 @@ public class Enemy : Entity {
     public IEMovement MyCurrentBehavior;
     protected IEMovement _Escape;
     protected IEMovement _Chase;
-    IEMovement _previousBehavior;
+    protected IEMovement _previousBehavior;
     public ParticleSystem Particle;
+    public bool DoingBehaviour = false;
     void Awake(){
-        _Escape = new EmoveEscape(transform, playerManager.PlayerTransform, _speed);
-        _Chase = new EmoveTarget(transform, playerManager.PlayerTransform, _speed);
-        MyCurrentBehavior = null;
-        _previousBehavior = _Chase;
+        _Escape = new EmoveEscape(transform, Player.PlayerTransform, _speed);
+        _Chase = new EmoveTarget(transform, Player.PlayerTransform, _speed);
+        MyCurrentBehavior = _Chase;
     }
     void Update(){
-        MyCurrentBehavior?.Emovement();
-        //Debug.Log("mi transform es " + transform);
-        //Debug.Log("mi velosida es " + _speed);
-        //Debug.Log("mi behavior es " + MyCurrentBehavior);
+       if(DoingBehaviour) MyCurrentBehavior?.Emovement();    
     }
     public override void Death(){
         ParticleDeath();
-        MyCurrentBehavior = _Escape;
         base.Death();    
     }
     private void OnTriggerEnter(Collider other){
-        MyCurrentBehavior = _previousBehavior;
+        DoingBehaviour = true;
     }
     private void OnTriggerExit(Collider other) {
-        _previousBehavior = MyCurrentBehavior;
-        MyCurrentBehavior = null;
+       DoingBehaviour = false;
     }    
     public void ParticleDeath(){    
         Instantiate(Particle, transform.position,Quaternion.identity);
