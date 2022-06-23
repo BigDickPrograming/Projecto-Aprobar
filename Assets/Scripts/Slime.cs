@@ -18,6 +18,10 @@ public class Slime : Enemy, IPrototype {
         MyCurrentBehavior = _Escape;
         return this;
     }
+     public Slime setDoingBehaviour(){
+        DoingBehaviour = false;
+        return this;
+    }
     public Slime setPreviousBehavior(IEMovement behavior){
         _previousBehavior = behavior;
         return this;
@@ -30,13 +34,14 @@ public class Slime : Enemy, IPrototype {
         transform.localScale = new Vector3(x, y, z);
         return this;
     }
+
     public IPrototype Clone(){
         var res = Instantiate(this);
         float espacio = 0.5f/_numSlime + 4f;
         res.SetPosition(transform.localPosition.x + Random.Range(-espacio, espacio)
                 , transform.localPosition.y, transform.localPosition.z + Random.Range(-espacio, espacio))
             .SetScale(transform.localScale.x - 0.25f, transform.localScale.y - 0.25f, transform.localScale.z - 0.25f)
-            //.setChase(transform, playertarget, _speed)
+            .setDoingBehaviour()
             .setEscape();
         res._numSlime = _numSlime;
         return res;
@@ -59,11 +64,11 @@ public class Slime : Enemy, IPrototype {
 
     #region Factory
     protected override void Reset(){
-        //base.Reset();
-        _numSlime = 0;
+         //base.Reset();
+        _life = 2;
     }
     public static void TurnOn(Slime s){
-        //s.Reset();
+        s.Reset();
         s.gameObject.SetActive(true);
     }
 

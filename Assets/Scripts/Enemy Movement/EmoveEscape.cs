@@ -14,8 +14,11 @@ public class EmoveEscape : IEMovement{
     }
     
     public void Emovement(){
-      _transform.position -= (Player.PlayerTransform.position - _transform.position).normalized * _speed * Time.deltaTime;
-       Debug.Log("estoy escapando");
-       Debug.Log(Player.PlayerTransform.position);
+       _transform.position -= (VectorSinY(Player.PlayerTransform.position) - VectorSinY(_transform.position)).normalized * _speed * Time.deltaTime;
     }
+
+    Vector3 VectorSinY(Vector3 vec){
+        return new Vector3(vec.x, 0f, vec.z);
+    }
+
 }
