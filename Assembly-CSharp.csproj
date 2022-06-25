@@ -98,6 +98,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\EntityPrototype.cs" />
      <Compile Include="Assets\Scripts\PlayerFollow.cs" />
+     <Compile Include="Assets\Scripts\Coins\Colitiondetecter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\Scripts\LocalizationManager\LanguageManager.cs" />
@@ -119,7 +120,7 @@
      <Compile Include="Assets\Scripts\Enemy Movement\EmoveTarget.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Coins\Debugger.cs" />
-     <Compile Include="Assets\Scripts\Coins\Colitiondetecter.cs" />
+     <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
      <None Include="Assets\Entitys\Enemies\Spider\Spider.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -742,6 +743,15 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:\GitHub\Projecto Aprobar\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+        <HintPath>D:\GitHub\Projecto Aprobar\Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+        <HintPath>D:\GitHub\Projecto Aprobar\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+        <HintPath>D:\GitHub\Projecto Aprobar\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
