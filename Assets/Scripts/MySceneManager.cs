@@ -10,33 +10,15 @@ public enum Lvl {
 
 public class MySceneManager : MonoBehaviour {
     public static MySceneManager menuController;
-    public GameObject mainButtons;
-    public GameObject mainInstructions;
-    public GameObject backButton;
-    public GameObject controlMenu;
     private void Start(){
         menuController = this;
     }
     public void loadScene(string sceneName){
         SceneManager.LoadScene(sceneName);
     }
-
     public void reloadScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
-    public void Instructions(){
-        mainButtons.SetActive(false);
-        mainInstructions.SetActive(true);
-        backButton.SetActive(true);
-    }
-
-    public void Back(){
-        mainButtons.SetActive(true);
-        mainInstructions.SetActive(false);
-        backButton.SetActive(false);
-    }
-
     public void quitGame(){
         Debug.Log("Quitting...");
         Application.Quit();
@@ -49,11 +31,9 @@ public class MySceneManager : MonoBehaviour {
         EventManager.Unsubscribe(EVENT.LOSEGAME, OnLose);
         EventManager.Unsubscribe(EVENT.WINGAME, OnWin);
     }
-
     void OnLose(params object[] p){
         loadScene("LoseScene");
     }
-
     void OnWin(params object[] p){
         switch((Lvl)p[0]){
             case Lvl.one:
@@ -66,10 +46,5 @@ public class MySceneManager : MonoBehaviour {
                 loadScene("WinScene");
                 break;
         }
-    }
-
-    public void ControlMenu(){
-        controlMenu.SetActive(true);
-        mainButtons.SetActive(false);
     }
 }

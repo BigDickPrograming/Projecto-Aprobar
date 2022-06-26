@@ -10,9 +10,13 @@ public class TextTranslate : MonoBehaviour {
     [SerializeField] TextMeshProUGUI _myView;
     public bool needToLoad = false;
     void Awake(){
-        _manager.onUpdate += ChangeLang;
-        if(needToLoad){
-            ChangeLang();
+        //_manager = FindObjectOfType<LanguageManager>();
+        _manager = LanguageManager.instance;
+        if(_manager != null){
+            _manager.onUpdate += ChangeLang;
+            if(needToLoad){
+                ChangeLang();
+            }
         }
     }
 

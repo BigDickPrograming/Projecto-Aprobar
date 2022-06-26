@@ -11,6 +11,32 @@ public enum Language {
 
 [Serializable]
 public class LanguageManager : MonoBehaviour {
+    #region DontDestroyOnLoad
+    private static LanguageManager _instance;
+    public static LanguageManager instance {
+        get{
+            if(_instance == null){
+                _instance = GameObject.FindObjectOfType<LanguageManager>();
+                //Tell unity not to destroy this object when loading a new scene!
+                DontDestroyOnLoad(_instance.gameObject);
+            }
+            return _instance;
+        }
+    }
+    void Awake(){
+        if(_instance == null){
+            //If I am the first instance, make me the Singleton
+            _instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else{
+            //If a Singleton already exists and you find
+            //another reference in scene, destroy it!
+            if(this != _instance)
+                Destroy(this.gameObject);
+        }
+    }
+    #endregion
     [SerializeField] Language _selectedLanguage;
     [SerializeField] string _externalURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRU7_Z0zkdP_hjIx4vMT7mlc6o9wu24tavV-o6alovSh-mlfYhnAvyIwPaYupHm3z4IV-2PR9Mb06I-/pub?gid=0&single=true&output=csv";
     [SerializeField] Dictionary<Language, Dictionary<string, string>> _languageManager;
@@ -20,8 +46,11 @@ public class LanguageManager : MonoBehaviour {
     }
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.U)){
-            EventManager.TriggerEvent(EVENT.WINGAME);
+        if (Input.GetKeyDown(KeyCode.O)){
+            EventManager.TriggerEvent(EVENT.WINGAME, Lvl.one);
+        }
+        if (Input.GetKeyDown(KeyCode.T)){
+            EventManager.TriggerEvent(EVENT.WINGAME, Lvl.two);
         }
     }
 
