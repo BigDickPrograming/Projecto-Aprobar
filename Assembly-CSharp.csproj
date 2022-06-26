@@ -42,8 +42,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\Slime.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\EVENT.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\EventManager\EventManager.cs" />
      <Compile Include="Assets\Scripts\AttackPowerup.cs" />
      <Compile Include="Assets\Scripts\CoinCollector.cs" />
@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\FinalBoss.cs" />
      <Compile Include="Assets\Scripts\JoyController.cs" />
      <Compile Include="Assets\Scripts\IPrototype.cs" />
+     <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Scripts\HealingPowerup.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -120,7 +121,9 @@
      <Compile Include="Assets\Scripts\Enemy Movement\EmoveTarget.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Coins\Debugger.cs" />
-     <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
+     <Compile Include="Assets\Scripts\TextoParpadeante.cs" />
+     <Compile Include="Assets\Scripts\SlimeAttack.cs" />
+     <Compile Include="Assets\Scripts\SawTrap.cs" />
      <None Include="Assets\Entitys\Enemies\Spider\Spider.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

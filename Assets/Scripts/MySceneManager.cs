@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Lvl {
+    one,
+    two
+}
+
 public class MySceneManager : MonoBehaviour {
     public static MySceneManager menuController;
     public GameObject mainButtons;
@@ -19,7 +24,7 @@ public class MySceneManager : MonoBehaviour {
     public void reloadScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
+    
     public void Instructions(){
         mainButtons.SetActive(false);
         mainInstructions.SetActive(true);
@@ -50,10 +55,21 @@ public class MySceneManager : MonoBehaviour {
     }
 
     void OnWin(params object[] p){
-        loadScene("WinScene");
+        switch((Lvl)p[0]){
+            case Lvl.one:
+                loadScene("Nivel2");
+                break;
+            case Lvl.two:
+                loadScene("WinScene");
+                break;
+            default:
+                loadScene("WinScene");
+                break;
+        }
     }
 
     public void ControlMenu(){
         controlMenu.SetActive(true);
+        mainButtons.SetActive(false);
     }
 }

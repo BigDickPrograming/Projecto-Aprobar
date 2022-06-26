@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa1450535f492c4c9ef8fbeaa5f6e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 20
+  _life: 10
   rockBulletPrefab: {fileID: 3896348224387759070, guid: 30f823eece69be140b94a643f7f83246, type: 3}
   controller: {fileID: 0}
   prefabPositionTransform: {fileID: 4256411316801048368}

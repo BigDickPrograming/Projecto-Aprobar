@@ -6,8 +6,9 @@ public class FinalBoss : Entity {
     [SerializeField] RockBullet rockBulletPrefab;
     [SerializeField] Controller controller;
     [SerializeField] Transform prefabPositionTransform;
+    [SerializeField] Lvl lvlToLoad = Lvl.one;
     public override void Death(){
-        EventManager.TriggerEvent(EVENT.WINGAME);
+        EventManager.TriggerEvent(EVENT.WINGAME, lvlToLoad);
     }
 
     public void CreateBullet(){

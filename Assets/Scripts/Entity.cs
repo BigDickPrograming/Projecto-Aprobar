@@ -6,6 +6,7 @@ public class Entity : MonoBehaviour {
     [SerializeField]
     protected float _life;
     float maxHp;
+    AudioSource audio;
     /*  protected virtual void Death(){
         instantiateCoin();
     }
@@ -15,6 +16,7 @@ public class Entity : MonoBehaviour {
     }
     public virtual void Damage(float dmg){
         _life -= dmg;
+        audio.Play();
         if (_life <= 0)
             Death();
     }
