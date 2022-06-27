@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\LocalizationManager\TextTranslate.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\Coins\Controller.cs" />
+     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Scripts\LanguageChanger.cs" />
      <Compile Include="Assets\Scripts\LocalizationManager\LanguageU.cs" />
      <Compile Include="Assets\Scripts\TextoParpadeante.cs" />
@@ -125,7 +126,8 @@
      <Compile Include="Assets\Scripts\Enemy Movement\EmoveTarget.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Coins\Debugger.cs" />
-     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\JSON\LevelSaveManager.cs" />
      <None Include="Assets\Entitys\Enemies\Spider\Spider.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

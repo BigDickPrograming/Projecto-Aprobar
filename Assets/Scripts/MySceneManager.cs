@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum Lvl {
-    one,
-    two
-}
-
 public class MySceneManager : MonoBehaviour {
     public static MySceneManager menuController;
     private void Start(){
@@ -46,5 +41,21 @@ public class MySceneManager : MonoBehaviour {
                 loadScene("WinScene");
                 break;
         }
+    }
+    public void LoadCurrentLvl(){
+        switch(LevelManager.instance.currentLvl){
+            case Lvl.one:
+                loadScene("Tutorial");
+                break;
+            case Lvl.two:
+                loadScene("Nivel2");
+                break;
+            default:
+                loadScene("Tutorial");
+                break;
+        }
+    }
+    public void ResetPlayerData(){
+        LevelManager.instance.ResetLevels();
     }
 }
