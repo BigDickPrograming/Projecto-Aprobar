@@ -126,7 +126,12 @@
      <Compile Include="Assets\Scripts\Enemy Movement\EmoveTarget.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Coins\Debugger.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\ReviveScreen.cs" />
+=======
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\JSON\LevelSaveManager.cs" />
+>>>>>>> 43d8cb7b152647781830fac3bd74c73b9e42996f
      <None Include="Assets\Entitys\Enemies\Spider\Spider.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
