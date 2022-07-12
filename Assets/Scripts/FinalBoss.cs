@@ -26,6 +26,10 @@ public class FinalBoss : Entity {
         futurePosition += Player.PlayerTransform.position + controller.GetDir();
         desired -= transform.position;
         desired = futurePosition - transform.position;
-        return desired;
+        return VectorSinY(Player.PlayerTransform.position - transform.position);
+    }
+
+    Vector3 VectorSinY(Vector3 vec){
+        return new Vector3(vec.x, 0f, vec.z);
     }
 }

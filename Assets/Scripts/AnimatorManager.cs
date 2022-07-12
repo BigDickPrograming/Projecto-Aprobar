@@ -13,6 +13,7 @@ public class AnimatorManager : MonoBehaviour {
     static AnimatorManager _instance;
     public bool block;
     public bool isWalking;
+    public bool attackEnabled = true;
     Animator anim;
     int attackHash = Animator.StringToHash("Attack");
 
@@ -21,8 +22,15 @@ public class AnimatorManager : MonoBehaviour {
         _instance = this;
     }
     public void Attack(){
-        anim.SetTrigger(attackHash);
-        
+        if(attackEnabled){
+            anim.SetTrigger(attackHash);
+            attackEnabled = false;
+            StartCoroutine(LateEnableAttack());
+        }
+    }
+    IEnumerator LateEnableAttack(){
+        yield return new WaitForSeconds(0.5f);
+        attackEnabled = true;
     }
 
     public void setIsWalking(bool isWalking){

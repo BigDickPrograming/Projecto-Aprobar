@@ -43,18 +43,23 @@ public class LevelManager : MonoBehaviour {
         LevelSaveManager.instance.LoadJSON();
     }
     private void OnEnable(){
+        EventManager.Subscribe(EVENT.LOSEGAME, OnLose);
         EventManager.Subscribe(EVENT.WINGAME, OnWin);
     }
     private void OnDisable(){
         EventManager.Unsubscribe(EVENT.WINGAME, OnWin);
+        EventManager.Unsubscribe(EVENT.LOSEGAME, OnLose);
     }
     void OnWin(params object[] p){
         switch((Lvl)p[0]){
             case Lvl.one:
                 currentLvl = Lvl.two;
+                AnalyticsManager.instance.SendLevelFinishedEvent(1);
+                AnalyticsManager.instance.SendLevelStartedEvent(2);
                 break;
             case Lvl.two:
             default:
+                AnalyticsManager.instance.SendLevelFinishedEvent(2);
                 currentLvl = Lvl.won;
                 break;
         }
@@ -63,5 +68,18 @@ public class LevelManager : MonoBehaviour {
     public void ResetLevels(){
         currentLvl = Lvl.one;
         LevelSaveManager.instance.SaveJSON();
+    }
+    void OnLose(params object[] p){
+        int lvl = 0;
+        switch(currentLvl){
+            case Lvl.one:
+                lvl = 1;
+                break;
+            case Lvl.two:
+                lvl = 2;
+                break;
+
+        }
+        AnalyticsManager.instance.SendDeathEvent(lvl);
     }
 }

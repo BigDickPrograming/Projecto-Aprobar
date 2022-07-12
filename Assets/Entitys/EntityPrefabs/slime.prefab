@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 1049849770382805302}
   - component: {fileID: 7467845788971472181}
   - component: {fileID: 8351051002251570997}
+  - component: {fileID: 3213630335616120798}
   m_Layer: 13
   m_Name: slime
   m_TagString: Untagged
@@ -231,6 +232,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 0.70010614, z: 8}
   m_Center: {x: 0.0016582012, y: 0.344895, z: 0.00063982606}
+--- !u!54 &3213630335616120798
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554072540733696227}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7689234557236520599
 GameObject:
   m_ObjectHideFlags: 0

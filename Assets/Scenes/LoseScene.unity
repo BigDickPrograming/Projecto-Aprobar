@@ -1153,10 +1153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d9761bf42b10e4e92e1e379d25a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainButtons: {fileID: 0}
-  mainInstructions: {fileID: 0}
-  backButton: {fileID: 0}
-  controlMenu: {fileID: 0}
 --- !u!114 &1986367982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,8 +1322,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1986367981}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
-        m_MethodName: loadScene
-        m_Mode: 5
+        m_MethodName: LoadCurrentLvl
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

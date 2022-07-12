@@ -46,9 +46,11 @@ public class MySceneManager : MonoBehaviour {
         switch(LevelManager.instance.currentLvl){
             case Lvl.one:
                 loadScene("Tutorial");
+                AnalyticsManager.instance.SendLevelStartedEvent(1);
                 break;
             case Lvl.two:
                 loadScene("Nivel2");
+                AnalyticsManager.instance.SendLevelStartedEvent(2);
                 break;
             default:
                 loadScene("Tutorial");
