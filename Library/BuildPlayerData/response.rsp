@@ -2,6 +2,8 @@
 -a="D:\GitHub\Projecto Aprobar\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="D:\GitHub\Projecto Aprobar\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
 -a="D:\GitHub\Projecto Aprobar\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
+-a="D:\GitHub\Projecto Aprobar\Library\PlayerScriptAssemblies\UnityEngine.Monetization.dll"
+-a="D:\GitHub\Projecto Aprobar\Library\PlayerScriptAssemblies\UnityEngine.Advertisements.dll"
 -a="D:\GitHub\Projecto Aprobar\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
 -a="D:\GitHub\Projecto Aprobar\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll"
 -a="D:\GitHub\Projecto Aprobar\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Portable\Newtonsoft.Json.dll"

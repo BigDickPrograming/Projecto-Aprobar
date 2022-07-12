@@ -417,7 +417,9 @@ GameObject:
   - component: {fileID: 3120538288963741575}
   - component: {fileID: 3120538288962708935}
   - component: {fileID: 6452593383594534312}
-  m_Layer: 0
+  - component: {fileID: 954864699426736639}
+  - component: {fileID: 3982066806923111602}
+  m_Layer: 7
   m_Name: SawBlade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,6 +585,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &954864699426736639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120538288960648071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.44685403, y: 3.2171524, z: 3.0596948}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3982066806923111602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120538288960648071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a3178f511c89b4a805cb36d7cd3c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDMG: 2
+  bleedticks: 00000000000000000000000000000000
 --- !u!1 &3120538288960648093
 GameObject:
   m_ObjectHideFlags: 0

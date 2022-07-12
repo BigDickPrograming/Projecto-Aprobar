@@ -38,7 +38,7 @@ public class LanguageManager : MonoBehaviour {
     }
     #endregion
     [SerializeField] Language _selectedLanguage;
-    [SerializeField] string _externalURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRU7_Z0zkdP_hjIx4vMT7mlc6o9wu24tavV-o6alovSh-mlfYhnAvyIwPaYupHm3z4IV-2PR9Mb06I-/pub?gid=0&single=true&output=csv";
+    [SerializeField] string _externalURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRYA2KUZEVwaSVFYzpBNQbL6MajB_4zXz1G-6nDi1ysZEbbv7Qe2BoxUN4WdRmgtxmdxf5gJgmicPKA/pub?gid=0&single=true&output=csv";
     [SerializeField] Dictionary<Language, Dictionary<string, string>> _languageManager;
     public event Action onUpdate = delegate { };
     void Start(){

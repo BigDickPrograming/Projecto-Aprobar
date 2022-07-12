@@ -29,7 +29,6 @@ public class Attack : MonoBehaviour {
     IEnumerator attackOnStay(){
         while(isAttacking){
             EntityAttack();
-            Debug.Log(entity);
             yield return new WaitForSeconds(1f);
         }
     }

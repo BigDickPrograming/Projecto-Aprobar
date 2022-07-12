@@ -24,6 +24,7 @@ public class Player : Entity {
    }
    private void OnEnable(){ 
       EventManager.Subscribe(EVENT.GAIN_HP, Heal);
+      EventManager.Subscribe(EVENT.PLAYER_DAMAGEABLE, SetPlayerDamageable);
    }
    public override void Damage(float dmg){
       base.Damage(dmg);
@@ -32,12 +33,20 @@ public class Player : Entity {
    }
 
    public override void Death(){
-      EventManager.TriggerEvent(EVENT.LOSEGAME);
+      EventManager.TriggerEvent(EVENT.SHOW_ADD);
    }
 
    private void OnDisable(){
       EventManager.Unsubscribe(EVENT.GAIN_HP, Heal);
+      EventManager.Unsubscribe(EVENT.PLAYER_DAMAGEABLE, SetPlayerDamageable);
    }
 
-   
+   public void adRewardedRevive(float amount = 50f){
+      EventManager.TriggerEvent(EVENT.SHOW_ADD, amount);
+   }
+
+   void SetPlayerDamageable(params object[] p){
+      bool isDamageable = (bool) p[0];
+      damageable = isDamageable;
+   }
 }
